@@ -17,8 +17,7 @@
     "test": "TZ=UTC jest src"
   },
   "files": [
-    "src",
-    "bin"
+    "src"
   ],
   "main": "src/index.js",
   "keywords": [
