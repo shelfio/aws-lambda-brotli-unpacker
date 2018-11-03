@@ -36,6 +36,7 @@ A: This compression algorithm is known for great speed/size ration. Perfect for 
 ```js
 const {unpack} = require('@shelf/aws-lambda-brotli-unpacker');
 const {execSync} = require('child_process');
+
 const inputPath = path.join(__dirname, '..', 'bin', 'tt.tar.br'); // for example, tesseract
 const outputPath = '/tmp/tesseract/tesseract';
 
@@ -45,13 +46,6 @@ module.exports.handler = async event => {
   execSync(`${outputPath} -l eng image.png`);
 };
 ```
-
-`isSupportedFile` checks that file has image-like file extension and it's not in the list of
-unsupported by Tesseract file extensions.
-
-## Compile It Yourself
-
-See [compile-tesseract.sh](compile-tesseract.sh) & [compress-with-brotli.sh](compress-with-brotli.sh) files
 
 ## License
 
