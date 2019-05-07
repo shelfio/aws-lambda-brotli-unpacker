@@ -28,7 +28,7 @@
     "tar-fs": "1.16.3"
   },
   "devDependencies": {
-    "@shelf/eslint-config": "0.3.2",
+    "@shelf/eslint-config": "0.3.4",
     "eslint": "5.16.0",
     "husky": "2.2.0",
     "lint-staged": "8.1.6",
