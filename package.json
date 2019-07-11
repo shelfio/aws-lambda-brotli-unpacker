@@ -1,6 +1,6 @@
 {
   "name": "@shelf/aws-lambda-brotli-unpacker",
-  "version": "0.0.2",
+  "version": "1.0.0-beta",
   "description": "Unpacks large Lambda binaries to /tmp",
   "license": "MIT",
   "repository": "shelfio/aws-lambda-brotli-unpacker",
@@ -10,7 +10,7 @@
     "url": "shelf.io"
   },
   "engines": {
-    "node": ">=8.10"
+    "node": ">=10"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -35,7 +35,7 @@
     "prettier": "1.18.2"
   },
   "optionalDependencies": {
-    "iltorb": "^2.2.0"
+    "iltorb": "^2.4.3"
   },
   "husky": {
     "hooks": {
