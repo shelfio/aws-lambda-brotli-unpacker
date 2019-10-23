@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const tar = require('tar-fs');
+const {decompressStream} = require('iltorb');
 
 /**
  * Unpacks brotli archive of a .tar file to /tmp folder
@@ -40,6 +41,6 @@ module.exports.unpack = function({inputPath, outputPath}) {
       });
     });
 
-    source.pipe(require(`${__dirname}/iltorb`).decompressStream()).pipe(target);
+    source.pipe(decompressStream()).pipe(target);
   });
 };
