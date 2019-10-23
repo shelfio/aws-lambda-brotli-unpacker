@@ -4,9 +4,10 @@ const tar = require('tar-fs');
 
 /**
  * Unpacks brotli archive of a .tar file to /tmp folder
- * @param {String} inputPath Absolute path to the input brotli archive
- * @param {String} outputPath Path to the unpacked binary in /tmp folder
- * @return {Promise<String>} Path to unpacked binary, equals to outputBin
+ * @param {Object} args Object containing inputPath and outputPath props
+ * @param {string} args.inputPath Absolute path to the input brotli archive
+ * @param {string} args.outputPath Path to the unpacked binary in /tmp folder*
+ * @return {Promise<string>} Path to unpacked binary, equals to outputBin
  * @see https://github.com/alixaxel/chrome-aws-lambda
  */
 module.exports.unpack = function({inputPath, outputPath}) {
