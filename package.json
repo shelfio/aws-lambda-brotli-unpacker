@@ -10,7 +10,7 @@
     "url": "shelf.io"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=8.10"
   },
   "scripts": {
     "lint": "eslint . --fix",
