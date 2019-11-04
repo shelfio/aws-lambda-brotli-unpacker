@@ -14,7 +14,7 @@ $ yarn add @shelf/aws-lambda-brotli-unpacker
 
 ## Test
 
-Needs Docker and Yarn installed.
+Needs Docker installed.
 
 ```
 $ npm test
