@@ -10,7 +10,7 @@
     "url": "shelf.io"
   },
   "engines": {
-    "node": ">=8.10"
+    "node": ">=10.16.0"
   },
   "scripts": {
     "lint": "eslint . --fix",
@@ -35,9 +35,6 @@
     "jest": "^24.9.0",
     "lint-staged": "9.4.2",
     "prettier": "1.18.2"
-  },
-  "optionalDependencies": {
-    "iltorb": "^2.2.0"
   },
   "husky": {
     "hooks": {
