@@ -9,7 +9,9 @@ const tar = require('tar-fs');
  * @return {Promise<String>} Path to unpacked binary, equals to outputBin
  * @see https://github.com/alixaxel/chrome-aws-lambda
  */
-module.exports.unpack = function({inputPath, outputPath}) {
+module.exports.unpack = function({inputPath, outputBaseDir, outputPath}) {
+  outputBaseDir = outputBaseDir || '/tmp';
+
   return new Promise((resolve, reject) => {
     let input = path.resolve(inputPath);
     let output = outputPath;
@@ -19,7 +21,7 @@ module.exports.unpack = function({inputPath, outputPath}) {
     }
 
     const source = fs.createReadStream(input);
-    const target = tar.extract('/tmp');
+    const target = tar.extract(outputBaseDir);
 
     source.on('error', error => {
       return reject(error);

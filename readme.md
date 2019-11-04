@@ -12,6 +12,14 @@ Used in projects: [aws-lambda-tesseract](https://github.com/shelfio/aws-lambda-t
 $ yarn add @shelf/aws-lambda-brotli-unpacker
 ```
 
+## Test
+
+Needs Docker and Yarn installed.
+
+```
+$ npm test
+```
+
 ## Usage
 
 > Q: Why do I need this package?
