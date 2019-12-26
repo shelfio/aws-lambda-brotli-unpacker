@@ -47,6 +47,14 @@ module.exports.handler = async event => {
 };
 ```
 
+## Want to test in runtime ? Run docker ;)
+
+```sh
+docker run --rm \
+  -v "$PWD":/var/task \
+  lambci/lambda:nodejs12.x test.handler
+```
+
 ## License
 
 MIT © [Shelf](https://shelf.io)
