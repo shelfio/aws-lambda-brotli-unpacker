@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker build -t aws-lambda-brotli-unpacker-test . &&
+  docker run --rm aws-lambda-brotli-unpacker-test bash -c 'npm install && npm run test:internal'
