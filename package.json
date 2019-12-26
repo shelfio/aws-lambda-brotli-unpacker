@@ -1,6 +1,6 @@
 {
   "name": "@shelf/aws-lambda-brotli-unpacker",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Unpacks large Lambda binaries to /tmp",
   "license": "MIT",
   "repository": "shelfio/aws-lambda-brotli-unpacker",
