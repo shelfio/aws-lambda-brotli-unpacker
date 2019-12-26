@@ -1,4 +1,4 @@
-# aws-lambda-brotli-unpacker ![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+# aws-lambda-brotli-unpacker [![CircleCI](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master.svg?style=svg&circle-token=a31c3d7699a00ad54a4a8c3fce9e8636973c81f3)](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master) ![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
 > Unpacks large Lambda binaries to /tmp, such as Tesseract, LibreOffice, Google Chrome, etc
 
@@ -11,6 +11,8 @@ Used in projects: [aws-lambda-tesseract](https://github.com/shelfio/aws-lambda-t
 ```
 $ yarn add @shelf/aws-lambda-brotli-unpacker
 ```
+
+Version 1.x works with Node 10.x & 12.x only. For Node 8.10 use v0.0.2
 
 ## Test
 
