@@ -29,7 +29,7 @@
     "tar-fs": "2.0.0"
   },
   "devDependencies": {
-    "@shelf/eslint-config": "0.16.0",
+    "@shelf/eslint-config": "0.17.0",
     "eslint": "7.3.0",
     "husky": "4.2.5",
     "jest": "26.0.1",
