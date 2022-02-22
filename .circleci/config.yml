@@ -1,5 +1,12 @@
+version: 2.1
+
 orbs:
   node: circleci/node@1.1.6
+
+parameters:
+  node_version:
+    type: string
+    default: '14'
 
 commands:
   install_deps:
@@ -10,49 +17,17 @@ commands:
           dir: ~/repo/node_modules
           use-strict-cache: true
           steps:
-            - run: yarn install --pure-lockfile --ignore-scripts --no-progress
-
-version: 2.1
+            - run: yarn install --pure-lockfile --no-progress
 
 jobs:
-  tests_10:
+  build:
     executor:
       name: node/default
-      tag: '10'
+      tag: << pipeline.parameters.node_version >>
     working_directory: ~/repo
-    environment:
-      - JEST_JUNIT_OUTPUT_DIR: './test-results/jest'
-      - JEST_JUNIT_OUTPUT_NAME: 'results.xml'
     steps:
       - checkout
       - install_deps
-
-      - run: yarn test:internal
-
-      - store_test_results:
-          path: test-results
-  tests_12:
-    executor:
-      name: node/default
-      tag: '12'
-    working_directory: ~/repo
-    environment:
-      - JEST_JUNIT_OUTPUT_DIR: './test-results/jest'
-      - JEST_JUNIT_OUTPUT_NAME: 'results.xml'
-    steps:
-      - checkout
-      - install_deps
-
-      - run: yarn test:internal
-
-      - store_test_results:
-          path: test-results
-
-workflows:
-  version: 2
-
-  run_tests:
-    jobs:
-      - tests_10
-
-      - tests_12
+      - run: yarn test
+      - run: yarn type-check
+      - run: yarn lint:ci

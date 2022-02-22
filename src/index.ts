@@ -1,7 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const tar = require('tar-fs');
-const zlib = require('zlib');
+import fs from 'fs';
+import path from 'path';
+import tar from 'tar-fs';
+import zlib from 'zlib';
+
+type UnpackParams = {inputPath: string; outputBaseDir: string; outputPath: string};
 
 /**
  * Unpacks brotli archive of a .tar file to /tmp folder
@@ -10,27 +12,23 @@ const zlib = require('zlib');
  * @return {Promise<String>} Path to unpacked binary, equals to outputBin
  * @see https://github.com/alixaxel/chrome-aws-lambda
  */
-module.exports.unpack = function({inputPath, outputBaseDir, outputPath}) {
+export function unpack({inputPath, outputBaseDir, outputPath}: UnpackParams) {
   outputBaseDir = outputBaseDir || '/tmp';
 
   return new Promise((resolve, reject) => {
-    let input = path.resolve(inputPath);
-    let output = outputPath;
+    const input = path.resolve(inputPath);
+    const output = outputPath;
 
-    if (fs.existsSync(output) === true) {
+    if (fs.existsSync(output)) {
       return resolve(output);
     }
 
     const source = fs.createReadStream(input);
     const target = tar.extract(outputBaseDir);
 
-    source.on('error', error => {
-      return reject(error);
-    });
+    source.on('error', error => reject(error));
 
-    target.on('error', error => {
-      return reject(error);
-    });
+    target.on('error', error => reject(error));
 
     target.on('finish', () => {
       fs.chmod(output, '0755', error => {
@@ -44,4 +42,4 @@ module.exports.unpack = function({inputPath, outputBaseDir, outputPath}) {
 
     source.pipe(zlib.createBrotliDecompress()).pipe(target);
   });
-};
+}
