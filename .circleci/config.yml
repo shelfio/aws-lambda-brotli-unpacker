@@ -28,6 +28,6 @@ jobs:
     steps:
       - checkout
       - install_deps
-      - run: yarn test
+      - run: yarn test:internal
       - run: yarn type-check
       - run: yarn lint:ci
