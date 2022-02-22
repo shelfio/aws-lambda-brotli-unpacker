@@ -57,6 +57,15 @@ module.exports.handler = async event => {
 };
 ```
 
+## Publish
+
+```sh
+$ git checkout master
+$ yarn version
+$ yarn publish
+$ git push origin master --tags
+```
+
 ## License
 
 MIT © [Shelf](https://shelf.io)
