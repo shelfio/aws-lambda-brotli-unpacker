@@ -54,7 +54,7 @@
     "@shelf/tsconfig": "0.0.6",
     "@types/jest": "28.1.8",
     "@types/node": "16",
-    "@types/tar-fs": "2.0.1",
+    "@types/tar-fs": "2.0.4",
     "eslint": "8.47.0",
     "husky": "8.0.3",
     "jest": "28.1.3",
