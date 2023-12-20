@@ -55,7 +55,7 @@
     "@types/jest": "28.1.8",
     "@types/node": "16",
     "@types/tar-fs": "2.0.4",
-    "eslint": "8.47.0",
+    "eslint": "8.56.0",
     "husky": "8.0.3",
     "jest": "28.1.3",
     "lint-staged": "13.3.0",
