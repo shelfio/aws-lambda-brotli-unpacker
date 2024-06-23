@@ -46,8 +46,8 @@
     "tar-fs": "2.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.23.4",
-    "@babel/core": "7.23.6",
+    "@babel/cli": "7.24.7",
+    "@babel/core": "7.24.7",
     "@shelf/babel-config": "1.0.2",
     "@shelf/eslint-config": "2.18.0",
     "@shelf/prettier-config": "1.0.0",
