@@ -46,21 +46,21 @@
     "tar-fs": "2.1.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.22.9",
-    "@babel/core": "7.22.9",
-    "@shelf/babel-config": "1.0.2",
+    "@babel/cli": "7.24.7",
+    "@babel/core": "7.24.7",
+    "@shelf/babel-config": "3.0.0",
     "@shelf/eslint-config": "2.30.0",
     "@shelf/prettier-config": "1.0.0",
-    "@shelf/tsconfig": "0.0.6",
+    "@shelf/tsconfig": "0.1.0",
     "@types/jest": "28.1.8",
     "@types/node": "16",
-    "@types/tar-fs": "2.0.1",
-    "eslint": "8.45.0",
+    "@types/tar-fs": "2.0.4",
+    "eslint": "8.57.0",
     "husky": "8.0.3",
     "jest": "28.1.3",
-    "lint-staged": "13.2.3",
+    "lint-staged": "13.3.0",
     "prettier": "2.8.8",
-    "typescript": "5.1.6"
+    "typescript": "5.5.2"
   },
   "engines": {
     "node": ">=16"
