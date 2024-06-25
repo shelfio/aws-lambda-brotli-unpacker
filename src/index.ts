@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import tar from 'tar-fs';
 import zlib from 'zlib';
+import tar from 'tar-fs';
 
 type UnpackParams = {inputPath: string; outputBaseDir: string; outputPath: string};
 
