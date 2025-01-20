@@ -1,5 +1,5 @@
 import fs from 'fs';
-import {unpack} from './index';
+import {unpack} from './index.js';
 
 const outputBaseDir = './.test';
 const testPackageDir = './etc/test/packages';
