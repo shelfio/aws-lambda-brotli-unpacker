@@ -13,14 +13,15 @@
     "email": "vlad@shelf.io",
     "url": "shelf.io"
   },
-  "main": "lib",
+  "sideEffects": false,
+  "type": "module",
+  "exports": "./lib/index.js",
+  "module": "./lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
-    "build": "rm -rf lib/ && yarn build:types && yarn build:code",
-    "build:code": "babel src --out-dir lib --ignore '**/*.test.ts' --extensions '.ts' && find ./lib -name '*.test.d.ts' -delete",
-    "build:types": "tsc --emitDeclarationOnly --declaration --isolatedModules false --declarationDir lib",
+    "build": "rm -rf lib/ && tsc",
     "coverage": "yarn test --coverage",
     "lint": "yarn lint:ci --fix",
     "lint:ci": "eslint . --quiet",
@@ -38,28 +39,26 @@
       "eslint --fix"
     ]
   },
-  "babel": {
-    "extends": "@shelf/babel-config/backend"
-  },
   "prettier": "@shelf/prettier-config",
   "dependencies": {
     "tar-fs": "3.0.8"
   },
   "devDependencies": {
-    "@babel/cli": "7.26.4",
-    "@babel/core": "7.26.0",
-    "@shelf/babel-config": "3.0.0",
     "@shelf/eslint-config": "4.4.0",
     "@shelf/prettier-config": "1.0.0",
     "@shelf/tsconfig": "0.1.0",
+    "@swc/core": "1.4.11",
+    "@swc/jest": "0.2.36",
     "@types/jest": "29.5.14",
     "@types/node": "20",
     "@types/tar-fs": "2.0.4",
     "eslint": "9.18.0",
     "husky": "9.1.7",
     "jest": "29.7.0",
+    "jest-junit": "16.0.0",
     "lint-staged": "15.4.1",
     "prettier": "3.4.2",
+    "ts-jest-resolver": "2.0.1",
     "typescript": "5.7.3"
   },
   "engines": {
