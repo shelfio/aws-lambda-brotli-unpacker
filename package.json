@@ -41,7 +41,7 @@
   },
   "prettier": "@shelf/prettier-config",
   "dependencies": {
-    "tar-fs": "3.0.8"
+    "tar-fs": "3.0.9"
   },
   "devDependencies": {
     "@shelf/eslint-config": "5.0.1",
