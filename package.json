@@ -59,7 +59,7 @@
     "lint-staged": "16.2.3",
     "prettier": "3.6.2",
     "ts-jest-resolver": "2.0.1",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   },
   "engines": {
     "node": ">=20"
