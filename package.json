@@ -22,10 +22,10 @@
   ],
   "scripts": {
     "build": "rm -rf lib/ && tsc",
-    "coverage": "yarn test --coverage",
-    "lint": "yarn lint:ci --fix",
+    "coverage": "pnpm test --coverage",
+    "lint": "pnpm lint:ci --fix",
     "lint:ci": "eslint . --quiet",
-    "prepack": "yarn build",
+    "prepack": "pnpm build",
     "test": "bin/test",
     "test:internal": "rm -rf .test && mkdir .test && jest",
     "type-check": "tsc --noEmit",
@@ -62,7 +62,7 @@
     "typescript": "5.9.3"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19.0"
   },
   "publishConfig": {
     "access": "public"
