@@ -1,4 +1,4 @@
-# aws-lambda-brotli-unpacker [![CircleCI](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master.svg?style=svg&circle-token=a31c3d7699a00ad54a4a8c3fce9e8636973c81f3)](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master) ![](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+# aws-lambda-brotli-unpacker [![CircleCI](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master.svg?style=svg&circle-token=a31c3d7699a00ad54a4a8c3fce9e8636973c81f3)](https://circleci.com/gh/shelfio/aws-lambda-brotli-unpacker/tree/master)
 
 > Unpacks large Lambda binaries to /tmp, such as Tesseract, LibreOffice, Google Chrome, etc
 
