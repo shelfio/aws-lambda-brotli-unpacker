@@ -27,6 +27,7 @@
     "lint": "oxfmt && eslint . --quiet --fix",
     "lint:ci": "oxfmt --check && eslint . --quiet",
     "prepack": "pnpm build",
+    "prepare": "husky",
     "test": "bin/test",
     "test:internal": "rm -rf .test && mkdir .test && jest",
     "type-check": "tsc --noEmit",
