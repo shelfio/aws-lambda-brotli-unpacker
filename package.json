@@ -54,6 +54,7 @@
     "@types/jest": "30.0.0",
     "@types/node": "20",
     "@types/tar-fs": "2.0.4",
+    "@typescript/native": "npm:typescript@7.0.2",
     "eslint": "10.8.0",
     "husky": "9.1.7",
     "jest": "30.2.0",
@@ -62,7 +63,7 @@
     "lint-staged": "16.2.7",
     "oxfmt": "0.64.0",
     "ts-jest-resolver": "2.0.1",
-    "typescript": "6.0.3"
+    "typescript": "npm:@typescript/typescript6@6.0.2"
   },
   "engines": {
     "node": ">=20.19.0"
