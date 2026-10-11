@@ -61,7 +61,7 @@
     "jest-junit": "16.0.0",
     "knip": "6.38.0",
     "lint-staged": "16.2.7",
-    "oxfmt": "0.64.0",
+    "oxfmt": "0.70.0",
     "ts-jest-resolver": "2.0.1",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   },
